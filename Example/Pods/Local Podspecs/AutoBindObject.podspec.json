@@ -1,9 +1,8 @@
 {
   "name": "AutoBindObject",
   "version": "0.1.0",
-  "summary": "A short description of AutoBindObject.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/AutoBindObject",
+  "summary": "Bind NSDictionary to Custom Object automatically. Generate NSDictionary from object properties.",
+  "homepage": "https://github.com/caohuuloc/AutoBindObject",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +11,7 @@
     "Cao Huu Loc": "caohuuloc@yahoo.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/AutoBindObject.git",
+    "git": "https://github.com/caohuuloc/AutoBindObject.git",
     "tag": "0.1.0"
   },
   "platforms": {

@@ -7,6 +7,7 @@
 //
 
 #import "CHLViewController.h"
+#import "SampleData1.h"
 
 @interface CHLViewController ()
 
@@ -17,7 +18,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    SampleData1 *obj = [[SampleData1 alloc] init];
+    obj.name = @"Cao Huu Loc";
+    obj.address = @"Tran Hung Dao";
+    obj.age = 35;
+    NSDictionary *dic = [obj toDictionary];
+    NSLog(@"%@", dic);
 }
 
 - (void)didReceiveMemoryWarning
