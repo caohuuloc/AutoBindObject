@@ -1,0 +1,6 @@
+framework module Pods_AutoBindObject_Tests {
+  umbrella header "Pods-AutoBindObject_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

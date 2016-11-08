@@ -1,0 +1,22 @@
+{
+  "name": "AutoBindObject",
+  "version": "0.1.0",
+  "summary": "A short description of AutoBindObject.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/AutoBindObject",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Cao Huu Loc": "caohuuloc@yahoo.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/AutoBindObject.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AutoBindObject/Classes/**/*"
+}

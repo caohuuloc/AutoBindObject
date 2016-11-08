@@ -1,0 +1,16 @@
+PODS:
+  - AutoBindObject (0.1.0)
+
+DEPENDENCIES:
+  - AutoBindObject (from `../`)
+
+EXTERNAL SOURCES:
+  AutoBindObject:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AutoBindObject: 520a25526f824dae66005d031183d1de80c3a475
+
+PODFILE CHECKSUM: dd3b8ec3e7b701d037e9a9f1d0d554b4bd998c28
+
+COCOAPODS: 1.1.1
