@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AutoBindObject_Example' do
+  pod 'AutoBindObject', :path => '../'
+
+  target 'AutoBindObject_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
