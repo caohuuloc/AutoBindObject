@@ -115,6 +115,9 @@
             if (class && [class isSubclassOfClass:[AutoBindObject class]]) {
                 id object = [[class alloc] initWithDictionary:value];
                 [self setValue:object forKey:propertyName];
+            } else if ([class isSubclassOfClass:[NSDictionary class]]) {
+                id object = [[NSMutableDictionary alloc] initWithDictionary:value];
+                [self setValue:object forKey:propertyName];
             }
         } else {
             [self setValue:value forKey:propertyName];
@@ -132,7 +135,6 @@
             if (![self shouldUsePropertyToGenDicData:key]) {
                 continue;
             }
-            
             NSString *dictionaryKey = [self dictionaryKeyForPropertyName:key];
             id object = [self valueForKey:key];
             if ([object isKindOfClass:[NSArray class]]) {
@@ -148,6 +150,20 @@
                     [ret setValue:object forKey:dictionaryKey];
                 }
             } else {
+                //Loc: Fix bug on some iOS versions, such as: iOS 9.3.5, or 10.3.2
+                objc_property_t property = [self getPropertyTypeByName:key];
+                char *type = property_copyAttributeValue(property, "T");
+                if (type) {
+                    NSString *s = [[NSString alloc] initWithUTF8String:type];
+                    if (s && [s isEqualToString:@"c"]) {
+                        //This is BOOL type with some iOS versions
+                        BOOL b = [object boolValue];
+                        object = [NSNumber numberWithBool:b];
+                    }
+                }
+                free(type);
+                //---
+                
                 [ret setValue:object forKey:dictionaryKey];
             }
         }
